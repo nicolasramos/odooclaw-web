@@ -1,34 +1,29 @@
 {
   "name": "web-odooclaw",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "OdooClaw Marketing and Documentation Site",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "overrides": {
+    "astro": "^6.1.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nicolasramos/odooclaw.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/nicolasramos/odooclaw/issues"
-  },
-  "homepage": "https://github.com/nicolasramos/odooclaw#readme",
   "dependencies": {
-    "@astrojs/mdx": "^5.0.3",
+    "astro": "^6.1.0",
     "@astrojs/starlight": "^0.38.2",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^6.1.0",
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.38.0",
+    "@astrojs/mdx": "^5.0.3",
+    "tailwindcss": "^3.4.1",
     "lucide-astro": "^0.556.0",
-    "tailwind-merge": "^3.5.0",
-    "tailwindcss": "^3.4.19"
+    "framer-motion": "^12.4.10",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.2"
   }
 }
