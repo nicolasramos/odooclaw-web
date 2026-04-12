@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Odooclaw - The Lightweight AI Assistant for Odoo</title>
-    <meta name="description" content="Odooclaw brings AI assistance, OCR, voice interactions, and permission-aware actions directly into Odoo Discuss, without bloating your stack.">
+    <meta id="meta-description" name="description" content="Odooclaw brings AI assistance, OCR, voice interactions, and dual-layer memory (HOT + COLD) directly into Odoo Discuss, with scoped retrieval and explainable context.">
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
@@ -127,14 +127,18 @@
                 <img alt="Odooclaw Logo" class="h-10 w-auto mix-blend-multiply" src="./logo_openclaw_web.png"/>
             </a>
             <div class="hidden md:flex items-center gap-6 lg:gap-8 font-manrope font-semibold tracking-tight text-sm lg:text-base">
-                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#capabilities">Features</a>
-                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#copilot-flow">Copilot</a>
-                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#architecture">Architecture</a>
-                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#security">Security</a>
-                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#changelog">Changelog</a>
-                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="https://github.com/nicolasramos/odooclaw#readme" target="_blank">Docs</a>
+                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#capabilities" data-i18n="nav-features">Features</a>
+                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#copilot-flow" data-i18n="nav-copilot">Copilot</a>
+                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#architecture" data-i18n="nav-architecture">Architecture</a>
+                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#security" data-i18n="nav-security">Security</a>
+                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="#changelog" data-i18n="nav-changelog">Changelog</a>
+                <a class="text-slate-600 hover:text-purple-600 transition-all duration-300" href="https://github.com/nicolasramos/odooclaw#readme" target="_blank" data-i18n="nav-docs">Docs</a>
             </div>
             <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center rounded-full border border-outline-variant/40 bg-surface-container-lowest p-1 text-xs font-bold">
+                    <button id="lang-en" type="button" class="px-3 py-1 rounded-full bg-primary text-on-primary" onclick="setLanguage('en')">EN</button>
+                    <button id="lang-es" type="button" class="px-3 py-1 rounded-full text-on-surface-variant" onclick="setLanguage('es')">ES</button>
+                </div>
                 <a href="https://github.com/nicolasramos/odooclaw" target="_blank" class="hidden lg:flex items-center gap-2 text-slate-600 font-semibold hover:text-purple-600 px-4 py-2 transition-all">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                     GitHub
@@ -148,11 +152,11 @@
         <section class="relative overflow-hidden pt-24 pb-16 px-6">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
                 <div class="flex-1 text-center lg:text-left">
-                    <h1 class="text-5xl lg:text-6xl font-extrabold text-on-background tracking-tighter leading-[1.1] mb-6">
+                    <h1 id="hero-title" data-i18n-html="hero-title" class="text-5xl lg:text-6xl font-extrabold text-on-background tracking-tighter leading-[1.1] mb-6">
                         AI assistant for Odoo, <br/>built to run where <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">your ERP lives.</span>
                     </h1>
-                    <p class="text-xl text-on-surface-variant max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-                        Odooclaw brings AI assistance, OCR, voice interactions, and permission-aware actions directly into Odoo. Lightweight, asynchronous, and designed for real production environments.
+                    <p id="hero-subtitle" data-i18n="hero-subtitle" class="text-xl text-on-surface-variant max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+                        Odooclaw brings AI assistance, OCR, voice interactions, and dual-layer memory directly into Odoo. Lightweight, asynchronous, and designed for real production environments with scoped and explainable recall.
                     </p>
                     <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                         <a href="https://github.com/nicolasramos/odooclaw" target="_blank" class="w-full sm:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl shadow-primary/20 hover:opacity-90 transition-opacity">
@@ -160,7 +164,7 @@
                             View on GitHub
                         </a>
                         <a href="https://github.com/nicolasramos/odooclaw#readme" target="_blank" class="w-full sm:w-auto bg-surface-container-highest text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-high transition-colors text-center">
-                            Read the Docs
+                            <span data-i18n="read-docs">Read the Docs</span>
                         </a>
                     </div>
                 </div>
@@ -193,11 +197,11 @@
             
             <!-- Trust Strip -->
             <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-outline-variant/15 flex flex-wrap justify-center lg:justify-between items-center gap-6 text-sm font-semibold text-on-surface-variant/80 font-manrope">
-                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="forum">forum</span> Native Odoo Discuss integration</div>
-                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="shield_person">shield_person</span> Permission-aware actions</div>
-                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="document_scanner">document_scanner</span> OCR and voice support</div>
-                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="sync_alt">sync_alt</span> Async webhook architecture</div>
-                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="web">web</span> Browser Copilot extension workflow</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="forum">forum</span> <span data-i18n="trust-discuss">Native Odoo Discuss integration</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="shield_person">shield_person</span> <span data-i18n="trust-permissions">Permission-aware actions</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="document_scanner">document_scanner</span> <span data-i18n="trust-ocr-voice">OCR and voice support</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="sync_alt">sync_alt</span> <span data-i18n="trust-async">Async webhook architecture</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="memory">memory</span> <span data-i18n="trust-memory">Dual-layer memory (HOT + COLD) with scope isolation</span></div>
             </div>
         </section>
 
@@ -288,8 +292,8 @@
                     <!-- Card 7 -->
                     <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10 logic-node hover:shadow-md transition-shadow">
                         <span class="material-symbols-outlined text-primary text-3xl mb-4" data-icon="memory">memory</span>
-                        <h3 class="text-lg font-bold mb-2">Lightweight runtime</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">Written in Go with a small footprint, making it suitable for self-hosted deployments close to Odoo.</p>
+                        <h3 class="text-lg font-bold mb-2" data-i18n="cap-memory-title">Dual-layer memory engine</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed" data-i18n="cap-memory-desc">Combines HOT operational memory with COLD historical memory for durable recall, scoped isolation, temporal facts, and explainable retrieval.</p>
                     </div>
 
                     <!-- Card 8 -->
@@ -607,12 +611,12 @@
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
                     <div>
-                        <h2 class="text-4xl font-extrabold tracking-tight text-on-background mb-4">Latest Updates</h2>
-                        <p class="text-on-surface-variant text-lg">Follow the evolution of OdooClaw. Real updates directly from our repository.</p>
+                        <h2 class="text-4xl font-extrabold tracking-tight text-on-background mb-4" data-i18n="changelog-title">Latest Updates</h2>
+                        <p class="text-on-surface-variant text-lg" data-i18n="changelog-subtitle">Follow the evolution of OdooClaw. Real updates directly from our repository.</p>
                     </div>
                     <a href="https://github.com/nicolasramos/odooclaw/commits/main/" target="_blank" class="shrink-0 inline-flex items-center gap-2 bg-surface-container-highest text-primary px-6 py-3 rounded-full font-bold text-sm hover:bg-surface-container-high transition-colors">
                         <span class="material-symbols-outlined" data-icon="update">update</span>
-                        View all commits
+                        <span data-i18n="view-all-commits">View all commits</span>
                     </a>
                 </div>
 
@@ -620,16 +624,16 @@
                     <!-- Update 1 -->
                     <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 logic-node relative transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold font-mono border border-primary/20">Latest</span>
-                            <span class="text-on-surface-variant text-sm font-medium">Recent Commits</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold font-mono border border-primary/20" data-i18n="badge-latest">Latest</span>
+                            <span class="text-on-surface-variant text-sm font-medium" data-i18n="recent-commits">Recent Commits</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3">Browser Copilot + Odoo Modules for v16/v17/v18</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5">Latest releases add the Browser Copilot backend and extension workflow, plus native Odoo modules adapted for versions 16, 17, and 18.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update1-title">Scoped Historical Memory (HOT + COLD) is now live</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update1-desc">OdooClaw now ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
                             <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">31d1d38:</span> Add browser extension and Odoo modules v16-18.</li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">9422811:</span> Add Browser Copilot backend and markdown sanitizer.</li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">37ab8f1:</span> <span data-i18n="update1-commit1">Add scoped historical memory layer and tools.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">c3404e5:</span> <span data-i18n="update1-commit2">Document historical memory and Odoo chat QA.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -639,13 +643,13 @@
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
                             <span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-sm font-bold font-mono border border-outline-variant/20">Previous</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3">Markdown Rendering & Documentation Improvements</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5">Recent updates improve markdown rendering quality and refresh key docs so setup and usage flows are clearer across Odoo and Browser Copilot scenarios.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3">Browser Copilot + Odoo Modules for v16/v17/v18</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5">Recent releases add the Browser Copilot backend and extension workflow, plus native Odoo modules adapted for versions 16, 17, and 18.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
                             <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">68cccc9:</span> Improve Odoo markdown renderer.</li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">4932526:</span> Update README.md with latest integration details.</li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">31d1d38:</span> Add browser extension and Odoo modules v16-18.</li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">9422811:</span> Add Browser Copilot backend and markdown sanitizer.</li>
                             </ul>
                         </div>
                     </div>
@@ -655,13 +659,13 @@
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
                             <span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-sm font-bold font-mono border border-outline-variant/20">Initial</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3">New Tools, MCP Skill & Docker Workflow Updates</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5">Foundation work added new tools and an Odoo MCP skill, together with deployment documentation updates for Docker and Doodba environments.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3">Markdown Rendering & Documentation Improvements</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5">Earlier updates improved markdown rendering quality and refreshed key docs so setup and usage flows are clearer across Odoo and Browser Copilot scenarios.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
                             <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">785639b:</span> Introduce new tools for project workflows.</li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">2d85fc6:</span> Add odoo-mcp skill, docs, and Docker updates.</li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">68cccc9:</span> Improve Odoo markdown renderer.</li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">4932526:</span> Update README.md with latest integration details.</li>
                             </ul>
                         </div>
                     </div>
@@ -675,15 +679,15 @@
             <div class="max-w-5xl mx-auto bg-inverse-surface rounded-[2rem] p-12 lg:p-20 text-center relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 blur-[100px] -mr-48 -mt-48 pointer-events-none"></div>
                 <div class="relative z-10">
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-8">Bring AI into Odoo without turning your ERP into a science project.</h2>
-                    <p class="text-surface-container-high text-lg mb-12 max-w-2xl mx-auto opacity-80">OdooClaw helps teams add practical AI, OCR, voice, and tool-based workflows to Odoo while keeping architecture lean and security grounded.</p>
+                    <h2 id="cta-title" data-i18n-html="cta-title" class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-8">Bring AI into Odoo without turning your ERP into a science project.</h2>
+                    <p class="text-surface-container-high text-lg mb-12 max-w-2xl mx-auto opacity-80" data-i18n="cta-desc">OdooClaw helps teams add practical AI, OCR, voice, and dual-layer memory to Odoo while keeping architecture lean, recall traceable, and security grounded.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="https://github.com/nicolasramos/odooclaw" target="_blank" class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                             View on GitHub
                         </a>
                         <a href="https://github.com/nicolasramos/odooclaw#readme" target="_blank" class="bg-white/10 text-white backdrop-blur-md px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all border border-white/10 flex items-center justify-center gap-2">
-                            Read the Docs
+                            <span data-i18n="read-docs">Read the Docs</span>
                         </a>
                     </div>
                 </div>
@@ -722,17 +726,17 @@
             
             <div class="grid grid-cols-2 gap-8">
                 <div>
-                    <h5 class="text-slate-900 font-bold mb-4">Resources</h5>
+                    <h5 class="text-slate-900 font-bold mb-4" data-i18n="footer-resources">Resources</h5>
                     <ul class="space-y-3">
-                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="https://github.com/nicolasramos/odooclaw" target="_blank">GitHub Repository</a></li>
-                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="https://github.com/nicolasramos/odooclaw#readme" target="_blank">Documentation</a></li>
+                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="https://github.com/nicolasramos/odooclaw" target="_blank" data-i18n="footer-github">GitHub Repository</a></li>
+                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="https://github.com/nicolasramos/odooclaw#readme" target="_blank" data-i18n="footer-docs">Documentation</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-slate-900 font-bold mb-4">Legal</h5>
+                    <h5 class="text-slate-900 font-bold mb-4" data-i18n="footer-legal">Legal</h5>
                     <ul class="space-y-3">
-                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="#" onclick="openModal('privacy-modal'); return false;">Privacy Policy</a></li>
-                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="#" onclick="openModal('terms-modal'); return false;">Terms of Service</a></li>
+                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="#" onclick="openModal('privacy-modal'); return false;" data-i18n="privacy-policy">Privacy Policy</a></li>
+                        <li><a class="text-slate-600 hover:text-purple-600 transition-colors hover:underline decoration-purple-500/30 underline-offset-4" href="#" onclick="openModal('terms-modal'); return false;" data-i18n="terms-service">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -744,7 +748,7 @@
         <div class="bg-surface-container-lowest w-full max-w-3xl rounded-xl max-h-[85vh] flex flex-col relative shadow-[0_24px_48px_rgba(33,49,56,0.06)]" onclick="event.stopPropagation()">
             <div class="p-8 overflow-y-auto">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 id="privacy-title" class="text-3xl font-extrabold font-manrope text-on-background">Privacy Policy</h2>
+                    <h2 id="privacy-title" data-i18n="privacy-policy" class="text-3xl font-extrabold font-manrope text-on-background">Privacy Policy</h2>
                     <button type="button" onclick="closeModal('privacy-modal')" class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-highest" aria-label="Close modal">
                         <span class="material-symbols-outlined" data-icon="close" aria-hidden="true">close</span>
                     </button>
@@ -766,7 +770,7 @@
                 </div>
             </div>
             <div class="p-6 border-t border-outline-variant/15 bg-surface-container-lowest rounded-b-xl flex justify-end">
-                <button type="button" onclick="closeModal('privacy-modal')" class="bg-surface-container-highest text-primary px-8 py-3 rounded-full font-bold text-sm hover:bg-surface-container-high transition-colors focus:ring-2 focus:ring-primary focus:outline-none">Acknowledge</button>
+                <button type="button" onclick="closeModal('privacy-modal')" class="bg-surface-container-highest text-primary px-8 py-3 rounded-full font-bold text-sm hover:bg-surface-container-high transition-colors focus:ring-2 focus:ring-primary focus:outline-none" data-i18n="acknowledge">Acknowledge</button>
             </div>
         </div>
     </div>
@@ -776,7 +780,7 @@
         <div class="bg-surface-container-lowest w-full max-w-3xl rounded-xl max-h-[85vh] flex flex-col relative shadow-[0_24px_48px_rgba(33,49,56,0.06)]" onclick="event.stopPropagation()">
             <div class="p-8 overflow-y-auto">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 id="terms-title" class="text-3xl font-extrabold font-manrope text-on-background">Terms of Service</h2>
+                    <h2 id="terms-title" data-i18n="terms-service" class="text-3xl font-extrabold font-manrope text-on-background">Terms of Service</h2>
                     <button type="button" onclick="closeModal('terms-modal')" class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-highest" aria-label="Close modal">
                         <span class="material-symbols-outlined" data-icon="close" aria-hidden="true">close</span>
                     </button>
@@ -796,15 +800,142 @@
                 </div>
             </div>
             <div class="p-6 border-t border-outline-variant/15 bg-surface-container-lowest rounded-b-xl flex justify-end">
-                <button type="button" onclick="closeModal('terms-modal')" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity focus:ring-2 focus:ring-primary focus:outline-none">I Accept</button>
+                <button type="button" onclick="closeModal('terms-modal')" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity focus:ring-2 focus:ring-primary focus:outline-none" data-i18n="i-accept">I Accept</button>
             </div>
         </div>
     </div>
 
     <script>
-        // Set dynamic dates
+        const I18N = {
+            en: {
+                "meta-description": "Odooclaw brings AI assistance, OCR, voice interactions, and dual-layer memory (HOT + COLD) directly into Odoo Discuss, with scoped retrieval and explainable context.",
+                "nav-features": "Features",
+                "nav-copilot": "Copilot",
+                "nav-architecture": "Architecture",
+                "nav-security": "Security",
+                "nav-changelog": "Changelog",
+                "nav-docs": "Docs",
+                "hero-title": "AI assistant for Odoo, <br/>built to run where <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container\">your ERP lives.</span>",
+                "hero-subtitle": "Odooclaw brings AI assistance, OCR, voice interactions, and dual-layer memory directly into Odoo. Lightweight, asynchronous, and designed for real production environments with scoped and explainable recall.",
+                "read-docs": "Read the Docs",
+                "trust-discuss": "Native Odoo Discuss integration",
+                "trust-permissions": "Permission-aware actions",
+                "trust-ocr-voice": "OCR and voice support",
+                "trust-async": "Async webhook architecture",
+                "trust-memory": "Dual-layer memory (HOT + COLD) with scope isolation",
+                "cap-memory-title": "Dual-layer memory engine",
+                "cap-memory-desc": "Combines HOT operational memory with COLD historical memory for durable recall, scoped isolation, temporal facts, and explainable retrieval.",
+                "changelog-title": "Latest Updates",
+                "changelog-subtitle": "Follow the evolution of OdooClaw. Real updates directly from our repository.",
+                "view-all-commits": "View all commits",
+                "badge-latest": "Latest",
+                "recent-commits": "Recent Commits",
+                "update1-title": "Scoped Historical Memory (HOT + COLD) is now live",
+                "update1-desc": "OdooClaw now ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.",
+                "update1-commit1": "Add scoped historical memory layer and tools.",
+                "update1-commit2": "Document historical memory and Odoo chat QA.",
+                "cta-title": "Bring AI into Odoo without turning your ERP into a science project.",
+                "cta-desc": "OdooClaw helps teams add practical AI, OCR, voice, and dual-layer memory to Odoo while keeping architecture lean, recall traceable, and security grounded.",
+                "footer-resources": "Resources",
+                "footer-github": "GitHub Repository",
+                "footer-docs": "Documentation",
+                "footer-legal": "Legal",
+                "privacy-policy": "Privacy Policy",
+                "terms-service": "Terms of Service",
+                "acknowledge": "Acknowledge",
+                "i-accept": "I Accept"
+            },
+            es: {
+                "meta-description": "Odooclaw integra IA, OCR, voz y memoria en dos capas (HOT + COLD) directamente en Odoo Discuss, con recuperación por alcance y contexto explicable.",
+                "nav-features": "Características",
+                "nav-copilot": "Copiloto",
+                "nav-architecture": "Arquitectura",
+                "nav-security": "Seguridad",
+                "nav-changelog": "Novedades",
+                "nav-docs": "Documentación",
+                "hero-title": "Asistente de IA para Odoo, <br/>diseñado para operar donde <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container\">vive tu ERP.</span>",
+                "hero-subtitle": "Odooclaw integra IA, OCR, voz y memoria en dos capas directamente en Odoo. Ligero, asíncrono y diseñado para entornos reales de producción con recuperación por alcance y explicable.",
+                "read-docs": "Leer documentación",
+                "trust-discuss": "Integración nativa con Odoo Discuss",
+                "trust-permissions": "Acciones con control de permisos",
+                "trust-ocr-voice": "Soporte de OCR y voz",
+                "trust-async": "Arquitectura asíncrona con webhooks",
+                "trust-memory": "Memoria en dos capas (HOT + COLD) con aislamiento por alcance",
+                "cap-memory-title": "Motor de memoria en dos capas",
+                "cap-memory-desc": "Combina memoria operativa HOT con memoria histórica COLD para recuperación duradera, aislamiento por alcance, hechos temporales y trazabilidad.",
+                "changelog-title": "Últimas novedades",
+                "changelog-subtitle": "Sigue la evolución de OdooClaw con cambios reales directamente desde el repositorio.",
+                "view-all-commits": "Ver todos los commits",
+                "badge-latest": "Último",
+                "recent-commits": "Commits recientes",
+                "update1-title": "La memoria histórica con alcance (HOT + COLD) ya está disponible",
+                "update1-desc": "OdooClaw ahora incluye memoria en dos capas, recuperación histórica por alcance, hechos temporales, consultas de timeline, herramientas de explicabilidad e importación histórica opcional con dry-run y deduplicación.",
+                "update1-commit1": "Añade capa de memoria histórica con alcance y herramientas.",
+                "update1-commit2": "Documenta memoria histórica y QA en chat de Odoo.",
+                "cta-title": "Lleva IA a Odoo sin convertir tu ERP en un experimento.",
+                "cta-desc": "OdooClaw ayuda a los equipos a incorporar IA práctica, OCR, voz y memoria en dos capas en Odoo, manteniendo una arquitectura ligera, trazable y segura.",
+                "footer-resources": "Recursos",
+                "footer-github": "Repositorio en GitHub",
+                "footer-docs": "Documentación",
+                "footer-legal": "Legal",
+                "privacy-policy": "Política de privacidad",
+                "terms-service": "Términos del servicio",
+                "acknowledge": "Entendido",
+                "i-accept": "Acepto"
+            }
+        };
+
+        function setLanguage(lang) {
+            const selected = I18N[lang] ? lang : 'en';
+            localStorage.setItem('odooclaw-web-lang', selected);
+            document.documentElement.lang = selected;
+
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.getAttribute('data-i18n');
+                const value = I18N[selected][key];
+                if (typeof value === 'string') {
+                    element.textContent = value;
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+                const key = element.getAttribute('data-i18n-html');
+                const value = I18N[selected][key];
+                if (typeof value === 'string') {
+                    element.innerHTML = value;
+                }
+            });
+
+            const metaDescription = document.getElementById('meta-description');
+            if (metaDescription && I18N[selected]['meta-description']) {
+                metaDescription.setAttribute('content', I18N[selected]['meta-description']);
+            }
+
+            const locale = selected === 'es' ? 'es-ES' : 'en-US';
+            document.getElementById('privacy-date').textContent = new Date().toLocaleDateString(locale, { month: 'long', day: 'numeric', year: 'numeric' });
+
+            const langEn = document.getElementById('lang-en');
+            const langEs = document.getElementById('lang-es');
+            if (langEn && langEs) {
+                const activeClasses = ['bg-primary', 'text-on-primary'];
+                const inactiveClasses = ['text-on-surface-variant'];
+
+                [langEn, langEs].forEach((button) => {
+                    button.classList.remove(...activeClasses);
+                    button.classList.add(...inactiveClasses);
+                });
+
+                const activeButton = selected === 'es' ? langEs : langEn;
+                activeButton.classList.add(...activeClasses);
+                activeButton.classList.remove(...inactiveClasses);
+            }
+        }
+
+        // Set dynamic year and initial language
         document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('privacy-date').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        const storedLanguage = localStorage.getItem('odooclaw-web-lang');
+        const browserLanguage = navigator.language && navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
+        setLanguage(storedLanguage || browserLanguage);
 
         // Modal functionality
         function openModal(id) {
