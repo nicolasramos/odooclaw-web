@@ -202,6 +202,7 @@
                 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="document_scanner">document_scanner</span> <span data-i18n="trust-ocr-voice">OCR and voice support</span></div>
                 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="sync_alt">sync_alt</span> <span data-i18n="trust-async">Async webhook architecture</span></div>
                 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="memory">memory</span> <span data-i18n="trust-memory">Dual-layer memory (HOT + COLD) with scope isolation</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="lock">lock</span> <span data-i18n="trust-private">Private Odoo reply routing (1:1 default)</span></div>
             </div>
         </section>
 
@@ -627,13 +628,13 @@
                             <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold font-mono border border-primary/20" data-i18n="badge-latest">Latest</span>
                             <span class="text-on-surface-variant text-sm font-medium" data-i18n="recent-commits">Recent Commits</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update1-title">Scoped Historical Memory (HOT + COLD) is now live</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update1-desc">OdooClaw now ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update1-title">Workforce + Accounting + OCR Expense flows are now live</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update1-desc">OdooClaw now adds workforce operations (attendance/check-in/check-out/timesheets/expense reports), accounting operations (reconciliation, aging, period close, journals, taxes), and OCR expense creation for employee and mileage receipts.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
-                            <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3">Commit Highlights</h4>
+                            <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3" data-i18n="commit-highlights">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">37ab8f1:</span> <span data-i18n="update1-commit1">Add scoped historical memory layer and tools.</span></li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">c3404e5:</span> <span data-i18n="update1-commit2">Document historical memory and Odoo chat QA.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">48d1153:</span> <span data-i18n="update1-commit1">Document workforce/accounting/OCR tools and private Odoo routing modes.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">runtime:</span> <span data-i18n="update1-commit2">Deploy private 1:1 reply routing and user-scoped session isolation for Odoo chat.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -641,15 +642,15 @@
                     <!-- Update 2 -->
                     <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 logic-node relative transition-all hover:shadow-md opacity-95">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
-                            <span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-sm font-bold font-mono border border-outline-variant/20">Previous</span>
+                            <span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-sm font-bold font-mono border border-outline-variant/20" data-i18n="badge-previous">Previous</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3">Browser Copilot + Odoo Modules for v16/v17/v18</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5">Recent releases add the Browser Copilot backend and extension workflow, plus native Odoo modules adapted for versions 16, 17, and 18.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update2-title">Scoped Historical Memory (HOT + COLD) is now live</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update2-desc">OdooClaw ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
-                            <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3">Commit Highlights</h4>
+                            <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3" data-i18n="commit-highlights">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">31d1d38:</span> Add browser extension and Odoo modules v16-18.</li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">9422811:</span> Add Browser Copilot backend and markdown sanitizer.</li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">37ab8f1:</span> <span data-i18n="update2-commit1">Add scoped historical memory layer and tools.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">c3404e5:</span> <span data-i18n="update2-commit2">Document historical memory and Odoo chat QA.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -657,15 +658,15 @@
                     <!-- Update 3 -->
                     <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 logic-node relative transition-all hover:shadow-md opacity-90">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
-                            <span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-sm font-bold font-mono border border-outline-variant/20">Initial</span>
+                            <span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-sm font-bold font-mono border border-outline-variant/20" data-i18n="badge-foundation">Foundation</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3">Markdown Rendering & Documentation Improvements</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5">Earlier updates improved markdown rendering quality and refreshed key docs so setup and usage flows are clearer across Odoo and Browser Copilot scenarios.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update3-title">Browser Copilot + Odoo Modules for v16/v17/v18</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update3-desc">The Browser Copilot backend and extension workflow were added, alongside native Odoo modules adapted for versions 16, 17, and 18.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
-                            <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3">Commit Highlights</h4>
+                            <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3" data-i18n="commit-highlights">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">68cccc9:</span> Improve Odoo markdown renderer.</li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">4932526:</span> Update README.md with latest integration details.</li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">31d1d38:</span> <span data-i18n="update3-commit1">Add browser extension and Odoo modules for v16/v17/v18.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">9422811:</span> <span data-i18n="update3-commit2">Add Browser Copilot backend and markdown sanitizer.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -823,17 +824,29 @@
                 "trust-ocr-voice": "OCR and voice support",
                 "trust-async": "Async webhook architecture",
                 "trust-memory": "Dual-layer memory (HOT + COLD) with scope isolation",
+                "trust-private": "Private Odoo reply routing (1:1 default)",
                 "cap-memory-title": "Dual-layer memory engine",
                 "cap-memory-desc": "Combines HOT operational memory with COLD historical memory for durable recall, scoped isolation, temporal facts, and explainable retrieval.",
                 "changelog-title": "Latest Updates",
                 "changelog-subtitle": "Follow the evolution of OdooClaw. Real updates directly from our repository.",
                 "view-all-commits": "View all commits",
                 "badge-latest": "Latest",
+                "badge-previous": "Previous",
+                "badge-foundation": "Foundation",
                 "recent-commits": "Recent Commits",
-                "update1-title": "Scoped Historical Memory (HOT + COLD) is now live",
-                "update1-desc": "OdooClaw now ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.",
-                "update1-commit1": "Add scoped historical memory layer and tools.",
-                "update1-commit2": "Document historical memory and Odoo chat QA.",
+                "commit-highlights": "Commit Highlights",
+                "update1-title": "Workforce + Accounting + OCR Expense flows are now live",
+                "update1-desc": "OdooClaw now adds workforce operations (attendance/check-in/check-out/timesheets/expense reports), accounting operations (reconciliation, aging, period close, journals, taxes), and OCR expense creation for employee and mileage receipts.",
+                "update1-commit1": "Document workforce/accounting/OCR tools and private Odoo routing modes.",
+                "update1-commit2": "Deploy private 1:1 reply routing and user-scoped session isolation for Odoo chat.",
+                "update2-title": "Scoped Historical Memory (HOT + COLD) is now live",
+                "update2-desc": "OdooClaw ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.",
+                "update2-commit1": "Add scoped historical memory layer and tools.",
+                "update2-commit2": "Document historical memory and Odoo chat QA.",
+                "update3-title": "Browser Copilot + Odoo Modules for v16/v17/v18",
+                "update3-desc": "The Browser Copilot backend and extension workflow were added, alongside native Odoo modules adapted for versions 16, 17, and 18.",
+                "update3-commit1": "Add browser extension and Odoo modules for v16/v17/v18.",
+                "update3-commit2": "Add Browser Copilot backend and markdown sanitizer.",
                 "cta-title": "Bring AI into Odoo without turning your ERP into a science project.",
                 "cta-desc": "OdooClaw helps teams add practical AI, OCR, voice, and dual-layer memory to Odoo while keeping architecture lean, recall traceable, and security grounded.",
                 "footer-resources": "Resources",
@@ -861,17 +874,29 @@
                 "trust-ocr-voice": "Soporte de OCR y voz",
                 "trust-async": "Arquitectura asíncrona con webhooks",
                 "trust-memory": "Memoria en dos capas (HOT + COLD) con aislamiento por alcance",
+                "trust-private": "Enrutamiento privado de respuestas en Odoo (1:1 por defecto)",
                 "cap-memory-title": "Motor de memoria en dos capas",
                 "cap-memory-desc": "Combina memoria operativa HOT con memoria histórica COLD para recuperación duradera, aislamiento por alcance, hechos temporales y trazabilidad.",
                 "changelog-title": "Últimas novedades",
                 "changelog-subtitle": "Sigue la evolución de OdooClaw con cambios reales directamente desde el repositorio.",
                 "view-all-commits": "Ver todos los commits",
                 "badge-latest": "Último",
+                "badge-previous": "Anterior",
+                "badge-foundation": "Base",
                 "recent-commits": "Commits recientes",
-                "update1-title": "La memoria histórica con alcance (HOT + COLD) ya está disponible",
-                "update1-desc": "OdooClaw ahora incluye memoria en dos capas, recuperación histórica por alcance, hechos temporales, consultas de timeline, herramientas de explicabilidad e importación histórica opcional con dry-run y deduplicación.",
-                "update1-commit1": "Añade capa de memoria histórica con alcance y herramientas.",
-                "update1-commit2": "Documenta memoria histórica y QA en chat de Odoo.",
+                "commit-highlights": "Highlights de commits",
+                "update1-title": "Los flujos de Workforce + Accounting + gastos OCR ya están disponibles",
+                "update1-desc": "OdooClaw añade operaciones de workforce (asistencia/check-in/check-out/partes de horas/reportes de gastos), operaciones de contabilidad (conciliación, aging, cierre de período, asientos, impuestos) y creación de gastos OCR para tickets de empleado y kilometraje.",
+                "update1-commit1": "Documenta herramientas de workforce/accounting/OCR y modos de privacidad en Odoo.",
+                "update1-commit2": "Despliega enrutamiento privado 1:1 y aislamiento de sesión por usuario en chat de Odoo.",
+                "update2-title": "La memoria histórica con alcance (HOT + COLD) ya está disponible",
+                "update2-desc": "OdooClaw incluye memoria en dos capas, recuperación histórica por alcance, hechos temporales, consultas de timeline, herramientas de explicabilidad e importación histórica opcional con dry-run y deduplicación.",
+                "update2-commit1": "Añade capa de memoria histórica con alcance y herramientas.",
+                "update2-commit2": "Documenta memoria histórica y QA en chat de Odoo.",
+                "update3-title": "Browser Copilot + módulos Odoo para v16/v17/v18",
+                "update3-desc": "Se añadió el backend de Browser Copilot y el flujo de extensión, junto con módulos nativos de Odoo adaptados para las versiones 16, 17 y 18.",
+                "update3-commit1": "Añade extensión de navegador y módulos Odoo para v16/v17/v18.",
+                "update3-commit2": "Añade backend de Browser Copilot y sanitizador de markdown.",
                 "cta-title": "Lleva IA a Odoo sin convertir tu ERP en un experimento.",
                 "cta-desc": "OdooClaw ayuda a los equipos a incorporar IA práctica, OCR, voz y memoria en dos capas en Odoo, manteniendo una arquitectura ligera, trazable y segura.",
                 "footer-resources": "Recursos",
