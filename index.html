@@ -4,7 +4,8 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Odooclaw - The Lightweight AI Assistant for Odoo</title>
-    <meta id="meta-description" name="description" content="Odooclaw brings AI assistance, OCR, voice interactions, and dual-layer memory (HOT + COLD) directly into Odoo Discuss, with scoped retrieval and explainable context.">
+    <meta id="meta-description" name="description" content="Odooclaw brings AI assistance, OCR, voice interactions, dual-layer memory, TLS-ready deployment, and a Firefox-approved Browser Copilot extension directly into Odoo workflows.">
+    <link rel="icon" href="./logo_openclaw_web.png" type="image/png"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
@@ -161,10 +162,13 @@
                     <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                         <a href="https://github.com/nicolasramos/odooclaw" target="_blank" class="w-full sm:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl shadow-primary/20 hover:opacity-90 transition-opacity">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                            View on GitHub
+                            <span data-i18n="view-github">View on GitHub</span>
                         </a>
                         <a href="https://github.com/nicolasramos/odooclaw#readme" target="_blank" class="w-full sm:w-auto bg-surface-container-highest text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-high transition-colors text-center">
                             <span data-i18n="read-docs">Read the Docs</span>
+                        </a>
+                        <a href="https://addons.mozilla.org/addon/odooclaw-browser-copilot/" target="_blank" class="w-full sm:w-auto bg-surface-container-lowest text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-high transition-colors text-center border border-primary/20">
+                            <span data-i18n="firefox-add-on">Firefox Add-on</span>
                         </a>
                     </div>
                 </div>
@@ -203,6 +207,8 @@
                 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="sync_alt">sync_alt</span> <span data-i18n="trust-async">Async webhook architecture</span></div>
                 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="memory">memory</span> <span data-i18n="trust-memory">Dual-layer memory (HOT + COLD) with scope isolation</span></div>
                 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="lock">lock</span> <span data-i18n="trust-private">Private Odoo reply routing (1:1 default)</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="extension">extension</span> <span data-i18n="trust-firefox">Firefox Add-on available</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" data-icon="encrypted">encrypted</span> <span data-i18n="trust-tls">TLS-ready gateway</span></div>
             </div>
         </section>
 
@@ -396,7 +402,8 @@
                             <p class="text-on-surface-variant text-base md:text-lg leading-relaxed" data-i18n="copilot-desc">Copilot extends OdooClaw with controlled web interaction for scenarios where data lives in portals or external back offices. Teams keep Odoo as the decision center while Copilot executes browser steps with security guardrails.</p>
                             <div class="mt-6 flex flex-wrap gap-3">
                                 <a href="#security" class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-all" data-i18n="copilot-cta-security">See security model</a>
-                                <a href="#architecture" class="inline-flex items-center gap-2 bg-surface-container-highest text-primary px-6 py-3 rounded-full font-bold text-sm hover:bg-surface-container-high transition-colors" data-i18n="copilot-cta-architecture">View architecture</a>
+                                <a href="https://addons.mozilla.org/addon/odooclaw-browser-copilot/" target="_blank" class="inline-flex items-center gap-2 bg-surface-container-highest text-primary px-6 py-3 rounded-full font-bold text-sm hover:bg-surface-container-high transition-colors" data-i18n="firefox-add-on">Firefox Add-on</a>
+                                <span class="inline-flex items-center gap-2 bg-surface text-on-surface-variant px-6 py-3 rounded-full font-bold text-sm border border-outline-variant/20" data-i18n="chrome-coming-soon">Chrome Web Store coming soon</span>
                             </div>
                         </div>
                         <div class="w-full lg:w-7/12">
@@ -475,6 +482,10 @@
                             <li class="flex items-start gap-4">
                                 <span class="material-symbols-outlined text-primary" data-icon="dns">dns</span>
                                 <span class="font-medium text-on-background" data-i18n="security-point-7">Fits self-hosted environments where data control matters</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary" data-icon="encrypted">encrypted</span>
+                                <span class="font-medium text-on-background" data-i18n="security-point-8">Supports reverse-proxy TLS and optional native gateway TLS</span>
                             </li>
                         </ul>
                     </div>
@@ -589,6 +600,10 @@
                             <span class="material-symbols-outlined text-secondary" data-icon="check">check</span>
                             <span class="font-medium text-on-background" data-i18n="deploy-point-5">With custom tool integrations and Browser Copilot</span>
                         </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary" data-icon="check">check</span>
+                            <span class="font-medium text-on-background" data-i18n="deploy-point-6">With reverse-proxy TLS or native TLS for standalone gateways</span>
+                        </li>
                     </ul>
 
                     <!-- Documentation CTA -->
@@ -624,13 +639,13 @@
                             <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold font-mono border border-primary/20" data-i18n="badge-latest">Latest</span>
                             <span class="text-on-surface-variant text-sm font-medium" data-i18n="recent-commits">Recent Commits</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update1-title">Workforce + Accounting + OCR Expense flows are now live</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update1-desc">OdooClaw now adds workforce operations (attendance/check-in/check-out/timesheets/expense reports), accounting operations (reconciliation, aging, period close, journals, taxes), and OCR expense creation for employee and mileage receipts.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update1-title">v0.2.3: TLS hardening and Firefox Add-on availability</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update1-desc">OdooClaw v0.2.3 adds optional native gateway TLS, documents the recommended reverse-proxy TLS path for Doodba deployments, and now links the public Firefox Add-on for Browser Copilot.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
                             <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3" data-i18n="commit-highlights">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">48d1153:</span> <span data-i18n="update1-commit1">Document workforce/accounting/OCR tools and private Odoo routing modes.</span></li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">runtime:</span> <span data-i18n="update1-commit2">Deploy private 1:1 reply routing and user-scoped session isolation for Odoo chat.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">75ebc72:</span> <span data-i18n="update1-commit1">Add optional TLS support for the shared gateway.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">cf08808:</span> <span data-i18n="update1-commit2">Document the public Firefox Add-on listing and Chrome coming soon status.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -640,13 +655,13 @@
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
                             <span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-sm font-bold font-mono border border-outline-variant/20" data-i18n="badge-previous">Previous</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update2-title">Scoped Historical Memory (HOT + COLD) is now live</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update2-desc">OdooClaw ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update2-title">Workforce + Accounting + OCR Expense flows are live</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update2-desc">OdooClaw adds workforce operations, accounting operations, and OCR expense creation for employee and mileage receipts.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
                             <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3" data-i18n="commit-highlights">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">37ab8f1:</span> <span data-i18n="update2-commit1">Add scoped historical memory layer and tools.</span></li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">c3404e5:</span> <span data-i18n="update2-commit2">Document historical memory and Odoo chat QA.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">48d1153:</span> <span data-i18n="update2-commit1">Document workforce/accounting/OCR tools and private Odoo routing modes.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">runtime:</span> <span data-i18n="update2-commit2">Deploy private 1:1 reply routing and user-scoped session isolation for Odoo chat.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -681,7 +696,7 @@
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="https://github.com/nicolasramos/odooclaw" target="_blank" class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                            View on GitHub
+                            <span data-i18n="view-github">View on GitHub</span>
                         </a>
                         <a href="https://github.com/nicolasramos/odooclaw#readme" target="_blank" class="bg-white/10 text-white backdrop-blur-md px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all border border-white/10 flex items-center justify-center gap-2">
                             <span data-i18n="read-docs">Read the Docs</span>
@@ -803,7 +818,7 @@
     <script>
         const I18N = {
             en: {
-                "meta-description": "Odooclaw brings AI assistance, OCR, voice interactions, and dual-layer memory (HOT + COLD) directly into Odoo Discuss, with scoped retrieval and explainable context.",
+                "meta-description": "Odooclaw brings AI assistance, OCR, voice interactions, dual-layer memory, TLS-ready deployment, and a Firefox-approved Browser Copilot extension directly into Odoo workflows.",
                 "nav-features": "Features",
                 "nav-copilot": "Copilot",
                 "nav-architecture": "Architecture",
@@ -811,14 +826,19 @@
                 "nav-changelog": "Changelog",
                 "nav-docs": "Docs",
                 "hero-title": "AI assistant for Odoo, <br/>built to run where <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container\">your ERP lives.</span>",
-                "hero-subtitle": "Odooclaw brings AI assistance, OCR, voice interactions, and dual-layer memory directly into Odoo. Lightweight, asynchronous, and designed for real production environments with scoped and explainable recall.",
+                "hero-subtitle": "Odooclaw brings AI assistance, OCR, voice interactions, dual-layer memory, TLS-ready deployment, and a Firefox-approved Browser Copilot extension directly into Odoo. Lightweight, asynchronous, and built for real production environments.",
                 "read-docs": "Read the Docs",
+                "view-github": "View on GitHub",
+                "firefox-add-on": "Firefox Add-on",
+                "chrome-coming-soon": "Chrome Web Store coming soon",
                 "trust-discuss": "Native Odoo Discuss integration",
                 "trust-permissions": "Permission-aware actions",
                 "trust-ocr-voice": "OCR and voice support",
                 "trust-async": "Async webhook architecture",
                 "trust-memory": "Dual-layer memory (HOT + COLD) with scope isolation",
                 "trust-private": "Private Odoo reply routing (1:1 default)",
+                "trust-firefox": "Firefox Add-on available",
+                "trust-tls": "TLS-ready gateway",
                 "why-title": "Built for Odoo, not bolted on top of it.",
                 "why-desc": "Most AI tools treat ERP systems like generic databases. OdooClaw does not. It is designed around how Odoo actually works: Discuss conversations, user permissions, business objects, and real operational workflows.<br/><br/>It helps teams move faster without bypassing the rules that keep ERP systems safe.<br/><br/>With Browser Copilot, teams can also guide web actions from controlled workflows while keeping Odoo as the operational source of truth.",
                 "why-point-1": "Works inside Odoo workflows",
@@ -838,7 +858,7 @@
                 "cap-async-title": "Async architecture",
                 "cap-async-desc": "Built around asynchronous webhooks so Odoo workers stay responsive while OdooClaw handles heavier processing outside the critical request path.",
                 "cap-copilot-title": "Browser Copilot integration",
-                "cap-copilot-desc": "Connect a lightweight browser extension to execute guided web flows with token auth, read-only defaults, allowlisted domains, and explicit confirmation before actions.",
+                "cap-copilot-desc": "Connect the public Firefox Add-on or local extension builds to execute guided web flows with token auth, read-only defaults, allowlisted domains, and explicit confirmation before actions.",
                 "cap-memory-title": "Dual-layer memory engine",
                 "cap-memory-desc": "Combines HOT operational memory with COLD historical memory for durable recall, scoped isolation, temporal facts, and explainable retrieval.",
                 "cap-context-title": "Context-aware execution",
@@ -860,8 +880,8 @@
                 "how-step5-title": "The result goes back into Odoo",
                 "how-step5-desc": "Responses, extracted data, or completed actions are returned to Odoo so users stay inside the same operational loop.",
                 "copilot-badge": "Browser Copilot Flow",
-                "copilot-title": "Guided browser automation, connected to Odoo.",
-                "copilot-desc": "Copilot extends OdooClaw with controlled web interaction for scenarios where data lives in portals or external back offices. Teams keep Odoo as the decision center while Copilot executes browser steps with security guardrails.",
+                "copilot-title": "Browser Copilot is now available on Firefox Add-ons.",
+                "copilot-desc": "Copilot extends OdooClaw with controlled web interaction for scenarios where data lives in portals, websites or external back offices. The Firefox Add-on is public, Chrome Web Store is coming soon, and Odoo remains the decision center.",
                 "copilot-cta-security": "See security model",
                 "copilot-cta-architecture": "View architecture",
                 "copilot-step1-title": "Trigger from Odoo",
@@ -881,6 +901,7 @@
                 "security-point-5": "Action execution requires explicit user confirmation before write operations",
                 "security-point-6": "Keeps operational context separated and auditable",
                 "security-point-7": "Fits self-hosted environments where data control matters",
+                "security-point-8": "Supports reverse-proxy TLS and optional native gateway TLS",
                 "usecases-title": "Practical use cases",
                 "usecase-1-title": "Accounting assistance",
                 "usecase-1-desc": "Use OCR and contextual actions to speed up invoice intake, validation, and operational review.",
@@ -910,6 +931,7 @@
                 "deploy-point-3": "With local models",
                 "deploy-point-4": "With remote providers",
                 "deploy-point-5": "With custom tool integrations and Browser Copilot",
+                "deploy-point-6": "With reverse-proxy TLS or native TLS for standalone gateways",
                 "deploy-cta-title": "Start building with OdooClaw",
                 "deploy-cta-desc": "Read the installation guides, configure providers, tools, and Browser Copilot, and deploy OdooClaw into your Odoo environment step by step.",
                 "changelog-title": "Latest Updates",
@@ -920,14 +942,14 @@
                 "badge-foundation": "Foundation",
                 "recent-commits": "Recent Commits",
                 "commit-highlights": "Commit Highlights",
-                "update1-title": "Workforce + Accounting + OCR Expense flows are now live",
-                "update1-desc": "OdooClaw now adds workforce operations (attendance/check-in/check-out/timesheets/expense reports), accounting operations (reconciliation, aging, period close, journals, taxes), and OCR expense creation for employee and mileage receipts.",
-                "update1-commit1": "Document workforce/accounting/OCR tools and private Odoo routing modes.",
-                "update1-commit2": "Deploy private 1:1 reply routing and user-scoped session isolation for Odoo chat.",
-                "update2-title": "Scoped Historical Memory (HOT + COLD) is now live",
-                "update2-desc": "OdooClaw ships with dual-layer memory, scoped historical recall, temporal facts, timeline queries, explainability tooling, and optional historical import with dry-run + dedupe.",
-                "update2-commit1": "Add scoped historical memory layer and tools.",
-                "update2-commit2": "Document historical memory and Odoo chat QA.",
+                "update1-title": "v0.2.3: TLS hardening and Firefox Add-on availability",
+                "update1-desc": "OdooClaw v0.2.3 adds optional native gateway TLS, documents the recommended reverse-proxy TLS path for Doodba deployments, and now links the public Firefox Add-on for Browser Copilot.",
+                "update1-commit1": "Add optional TLS support for the shared gateway.",
+                "update1-commit2": "Document the public Firefox Add-on listing and Chrome coming soon status.",
+                "update2-title": "Workforce + Accounting + OCR Expense flows are live",
+                "update2-desc": "OdooClaw adds workforce operations, accounting operations, and OCR expense creation for employee and mileage receipts.",
+                "update2-commit1": "Document workforce/accounting/OCR tools and private Odoo routing modes.",
+                "update2-commit2": "Deploy private 1:1 reply routing and user-scoped session isolation for Odoo chat.",
                 "update3-title": "Browser Copilot + Odoo Modules for v16/v17/v18",
                 "update3-desc": "The Browser Copilot backend and extension workflow were added, alongside native Odoo modules adapted for versions 16, 17, and 18.",
                 "update3-commit1": "Add browser extension and Odoo modules for v16/v17/v18.",
@@ -965,7 +987,7 @@
                 "i-accept": "I Accept"
             },
             es: {
-                "meta-description": "Odooclaw integra IA, OCR, voz y memoria en dos capas (HOT + COLD) directamente en Odoo Discuss, con recuperación por alcance y contexto explicable.",
+                "meta-description": "Odooclaw integra IA, OCR, voz, memoria en dos capas, despliegue con TLS y una extensión Browser Copilot aprobada para Firefox directamente en flujos de Odoo.",
                 "nav-features": "Características",
                 "nav-copilot": "Copiloto",
                 "nav-architecture": "Arquitectura",
@@ -973,14 +995,19 @@
                 "nav-changelog": "Novedades",
                 "nav-docs": "Documentación",
                 "hero-title": "Asistente de IA para Odoo, <br/>diseñado para operar donde <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container\">vive tu ERP.</span>",
-                "hero-subtitle": "Odooclaw integra IA, OCR, voz y memoria en dos capas directamente en Odoo. Ligero, asíncrono y diseñado para entornos reales de producción con recuperación por alcance y explicable.",
+                "hero-subtitle": "Odooclaw integra IA, OCR, voz, memoria en dos capas, despliegue con TLS y una extensión Browser Copilot aprobada para Firefox directamente en Odoo. Ligero, asíncrono y diseñado para entornos reales de producción.",
                 "read-docs": "Leer documentación",
+                "view-github": "Ver en GitHub",
+                "firefox-add-on": "Extensión Firefox",
+                "chrome-coming-soon": "Chrome Web Store próximamente",
                 "trust-discuss": "Integración nativa con Odoo Discuss",
                 "trust-permissions": "Acciones con control de permisos",
                 "trust-ocr-voice": "Soporte de OCR y voz",
                 "trust-async": "Arquitectura asíncrona con webhooks",
                 "trust-memory": "Memoria en dos capas (HOT + COLD) con aislamiento por alcance",
                 "trust-private": "Enrutamiento privado de respuestas en Odoo (1:1 por defecto)",
+                "trust-firefox": "Extensión Firefox disponible",
+                "trust-tls": "Gateway preparado para TLS",
                 "why-title": "Diseñado para Odoo, no añadido por encima.",
                 "why-desc": "La mayoría de herramientas de IA tratan los ERP como bases de datos genéricas. OdooClaw no. Está diseñado en torno a cómo funciona realmente Odoo: conversaciones en Discuss, permisos de usuario, objetos de negocio y flujos operativos reales.<br/><br/>Ayuda a los equipos a avanzar más rápido sin saltarse las reglas que mantienen seguro al ERP.<br/><br/>Con Browser Copilot, los equipos también pueden guiar acciones web desde flujos controlados manteniendo Odoo como fuente operativa de verdad.",
                 "why-point-1": "Funciona dentro de los flujos de Odoo",
@@ -1000,7 +1027,7 @@
                 "cap-async-title": "Arquitectura asíncrona",
                 "cap-async-desc": "Construido sobre webhooks asíncronos para que los workers de Odoo sigan respondiendo mientras OdooClaw procesa tareas pesadas fuera de la ruta crítica.",
                 "cap-copilot-title": "Integración con Browser Copilot",
-                "cap-copilot-desc": "Conecta una extensión ligera de navegador para ejecutar flujos guiados con token auth, modo lectura por defecto, dominios permitidos y confirmación explícita antes de acciones de escritura.",
+                "cap-copilot-desc": "Conecta la extensión pública de Firefox o builds locales para ejecutar flujos web guiados con token auth, modo lectura por defecto, dominios permitidos y confirmación explícita antes de escribir.",
                 "cap-memory-title": "Motor de memoria en dos capas",
                 "cap-memory-desc": "Combina memoria operativa HOT con memoria histórica COLD para recuperación duradera, aislamiento por alcance, hechos temporales y trazabilidad.",
                 "cap-context-title": "Ejecución consciente del contexto",
@@ -1022,8 +1049,8 @@
                 "how-step5-title": "El resultado vuelve a Odoo",
                 "how-step5-desc": "Las respuestas, datos extraídos o acciones completadas vuelven a Odoo para mantener al usuario dentro del mismo circuito operativo.",
                 "copilot-badge": "Flujo Browser Copilot",
-                "copilot-title": "Automatización guiada de navegador, conectada con Odoo.",
-                "copilot-desc": "Copilot amplía OdooClaw con interacción web controlada para casos donde los datos viven en portales o backoffices externos. El equipo mantiene Odoo como centro de decisión mientras Copilot ejecuta pasos con guardrails de seguridad.",
+                "copilot-title": "Browser Copilot ya está disponible en Firefox Add-ons.",
+                "copilot-desc": "Copilot amplía OdooClaw con interacción web controlada para casos donde los datos viven en portales, websites o backoffices externos. La extensión de Firefox ya es pública, Chrome Web Store llegará próximamente y Odoo sigue siendo el centro de decisión.",
                 "copilot-cta-security": "Ver modelo de seguridad",
                 "copilot-cta-architecture": "Ver arquitectura",
                 "copilot-step1-title": "Disparo desde Odoo",
@@ -1043,6 +1070,7 @@
                 "security-point-5": "La ejecución de acciones requiere confirmación explícita del usuario antes de escribir",
                 "security-point-6": "Mantiene el contexto operativo separado y auditable",
                 "security-point-7": "Encaja en entornos self-hosted donde el control de datos importa",
+                "security-point-8": "Soporta TLS en reverse proxy y TLS nativo opcional en el gateway",
                 "usecases-title": "Casos de uso prácticos",
                 "usecase-1-title": "Asistencia contable",
                 "usecase-1-desc": "Usa OCR y acciones con contexto para acelerar la entrada, validación y revisión operativa de facturas.",
@@ -1072,6 +1100,7 @@
                 "deploy-point-3": "Con modelos locales",
                 "deploy-point-4": "Con proveedores remotos",
                 "deploy-point-5": "Con integraciones de tools personalizadas y Browser Copilot",
+                "deploy-point-6": "Con TLS por reverse proxy o TLS nativo para gateways standalone",
                 "deploy-cta-title": "Empieza a construir con OdooClaw",
                 "deploy-cta-desc": "Lee las guías de instalación, configura providers, tools y Browser Copilot, y despliega OdooClaw en tu entorno Odoo paso a paso.",
                 "changelog-title": "Últimas novedades",
@@ -1082,14 +1111,14 @@
                 "badge-foundation": "Base",
                 "recent-commits": "Commits recientes",
                 "commit-highlights": "Highlights de commits",
-                "update1-title": "Los flujos de Workforce + Accounting + gastos OCR ya están disponibles",
-                "update1-desc": "OdooClaw añade operaciones de workforce (asistencia/check-in/check-out/partes de horas/reportes de gastos), operaciones de contabilidad (conciliación, aging, cierre de período, asientos, impuestos) y creación de gastos OCR para tickets de empleado y kilometraje.",
-                "update1-commit1": "Documenta herramientas de workforce/accounting/OCR y modos de privacidad en Odoo.",
-                "update1-commit2": "Despliega enrutamiento privado 1:1 y aislamiento de sesión por usuario en chat de Odoo.",
-                "update2-title": "La memoria histórica con alcance (HOT + COLD) ya está disponible",
-                "update2-desc": "OdooClaw incluye memoria en dos capas, recuperación histórica por alcance, hechos temporales, consultas de timeline, herramientas de explicabilidad e importación histórica opcional con dry-run y deduplicación.",
-                "update2-commit1": "Añade capa de memoria histórica con alcance y herramientas.",
-                "update2-commit2": "Documenta memoria histórica y QA en chat de Odoo.",
+                "update1-title": "v0.2.3: TLS reforzado y extensión Firefox disponible",
+                "update1-desc": "OdooClaw v0.2.3 añade TLS nativo opcional en el gateway, documenta el camino recomendado con TLS en reverse proxy para Doodba y enlaza la extensión pública de Firefox para Browser Copilot.",
+                "update1-commit1": "Añade soporte TLS opcional para el gateway compartido.",
+                "update1-commit2": "Documenta la extensión pública de Firefox y Chrome próximamente.",
+                "update2-title": "Los flujos de Workforce + Accounting + gastos OCR están disponibles",
+                "update2-desc": "OdooClaw añade operaciones de workforce, operaciones de contabilidad y creación de gastos OCR para tickets de empleado y kilometraje.",
+                "update2-commit1": "Documenta herramientas de workforce/accounting/OCR y modos de privacidad en Odoo.",
+                "update2-commit2": "Despliega enrutamiento privado 1:1 y aislamiento de sesión por usuario en chat de Odoo.",
                 "update3-title": "Browser Copilot + módulos Odoo para v16/v17/v18",
                 "update3-desc": "Se añadió el backend de Browser Copilot y el flujo de extensión, junto con módulos nativos de Odoo adaptados para las versiones 16, 17 y 18.",
                 "update3-commit1": "Añade extensión de navegador y módulos Odoo para v16/v17/v18.",
