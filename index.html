@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Odooclaw - The Lightweight AI Assistant for Odoo</title>
-    <meta id="meta-description" name="description" content="Odooclaw brings AI assistance, OCR, voice interactions, dual-layer memory, TLS-ready deployment, and published Firefox/Chrome Browser Copilot extensions directly into Odoo workflows.">
+    <meta id="meta-description" name="description" content="Odooclaw v0.3.0 brings secure business operations, strategic Engram memory, OCR, voice, and Browser Copilot into real Odoo workflows.">
     <link rel="icon" href="./logo_openclaw_web.png" type="image/png"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -153,6 +153,10 @@
         <section class="relative overflow-hidden pt-24 pb-16 px-6">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
                 <div class="flex-1 text-center lg:text-left">
+                    <a href="https://github.com/nicolasramos/odooclaw/releases/tag/v0.3.0" target="_blank" class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-bold font-mono border border-primary/20 mb-6 hover:bg-primary/15 transition-colors">
+                        <span class="material-symbols-outlined text-base" data-icon="new_releases">new_releases</span>
+                        <span data-i18n="release-badge">v0.3.0 is available</span>
+                    </a>
                     <h1 id="hero-title" data-i18n-html="hero-title" class="text-5xl lg:text-6xl font-extrabold text-on-background tracking-tighter leading-[1.1] mb-6">
                         AI assistant for Odoo, <br/>built to run where <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">your ERP lives.</span>
                     </h1>
@@ -241,6 +245,56 @@
                         <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
                         <p class="font-medium text-on-background" data-i18n="why-point-4">Connects to tools and external services when needed</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: v0.3.0 Release -->
+        <section id="release" class="py-24 px-6 bg-inverse-surface text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary/25 blur-[120px] -mr-32 -mt-32 pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
+                    <div class="max-w-3xl">
+                        <span class="inline-flex items-center gap-2 bg-white/10 text-primary-fixed px-3 py-1 rounded-full text-xs font-bold font-mono border border-white/10" data-i18n="release-kicker">Latest release · June 8, 2026</span>
+                        <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mt-5 mb-5" data-i18n="release-title">v0.3.0: safer day-to-day Odoo operations</h2>
+                        <p class="text-surface-container-high text-lg leading-relaxed" data-i18n="release-desc">OdooClaw now covers practical purchase, vendor-bill, inventory, and warehouse workflows while executing under each authenticated user's native Odoo permissions.</p>
+                    </div>
+                    <a href="https://github.com/nicolasramos/odooclaw/releases/tag/v0.3.0" target="_blank" class="shrink-0 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-7 py-3 rounded-full font-bold hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        <span data-i18n="release-cta">Read v0.3.0 release notes</span>
+                        <span class="material-symbols-outlined text-base" data-icon="arrow_outward">arrow_outward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <span class="material-symbols-outlined text-primary-fixed text-3xl mb-4" data-icon="receipt_long">receipt_long</span>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="release-purchase-title">Purchases and vendor bills</h3>
+                        <p class="text-surface-container-high text-sm leading-relaxed" data-i18n="release-purchase-desc">OCR validation, duplicate and total checks, missing-vendor proposals, and PO/receipt matching.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <span class="material-symbols-outlined text-primary-fixed text-3xl mb-4" data-icon="warehouse">warehouse</span>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="release-stock-title">Inventory and warehouse</h3>
+                        <p class="text-surface-container-high text-sm leading-relaxed" data-i18n="release-stock-desc">Receipts, deliveries, transfers, traceability, replenishment, discrepancies, and controlled adjustments.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <span class="material-symbols-outlined text-primary-fixed text-3xl mb-4" data-icon="verified_user">verified_user</span>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="release-security-title">Native delegated security</h3>
+                        <p class="text-surface-container-high text-sm leading-relaxed" data-i18n="release-security-desc">Every MCP operation inherits Odoo ACLs, record rules, active-user status, and company context.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <span class="material-symbols-outlined text-primary-fixed text-3xl mb-4" data-icon="hub">hub</span>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="release-oca-title">Capability-first OCA support</h3>
+                        <p class="text-surface-container-high text-sm leading-relaxed" data-i18n="release-oca-desc">Optional OCA purchase and logistics capabilities are detected without creating mandatory dependencies.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <span class="material-symbols-outlined text-primary-fixed text-3xl mb-4" data-icon="psychology_alt">psychology_alt</span>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="release-engram-title">Strategic memory with Engram</h3>
+                        <p class="text-surface-container-high text-sm leading-relaxed" data-i18n="release-engram-desc">Optional internal MCP integration stores durable decisions and discoveries without exposing raw Engram tools to the model.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/10 pt-8">
+                    <div><div class="text-3xl font-extrabold text-primary-fixed">114</div><div class="text-sm text-surface-container-high" data-i18n="release-stat-odoo">Odoo MCP tests passed</div></div>
+                    <div><div class="text-3xl font-extrabold text-primary-fixed">101</div><div class="text-sm text-surface-container-high" data-i18n="release-stat-doodba">Doodba 18 MCP tests passed</div></div>
+                    <div><div class="text-3xl font-extrabold text-primary-fixed">29</div><div class="text-sm text-surface-container-high" data-i18n="release-stat-copilot">Browser Copilot tests passed</div></div>
                 </div>
             </div>
         </section>
@@ -637,15 +691,15 @@
                     <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 logic-node relative transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
                             <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold font-mono border border-primary/20" data-i18n="badge-latest">Latest</span>
-                            <span class="text-on-surface-variant text-sm font-medium" data-i18n="recent-commits">Recent Commits</span>
+                            <span class="text-on-surface-variant text-sm font-medium" data-i18n="recent-commits">Published release</span>
                         </div>
-                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update1-title">v0.2.3: TLS hardening and browser extension availability</h3>
-                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update1-desc">OdooClaw v0.2.3 adds optional native gateway TLS, documents the recommended reverse-proxy TLS path for Doodba deployments, and now links the public Firefox Add-on and Chrome Web Store listing for Browser Copilot.</p>
+                        <h3 class="text-2xl font-bold font-manrope text-on-background mb-3" data-i18n="update1-title">v0.3.0: secure purchases, inventory, and warehouse operations</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-5" data-i18n="update1-desc">OdooClaw v0.3.0 expands safe day-to-day business operations and hardens delegated Odoo permissions, with real validation against Doodba 18.</p>
                         <div class="bg-surface p-4 rounded-xl border border-outline-variant/10">
                             <h4 class="text-xs font-bold text-on-background uppercase tracking-wider mb-3" data-i18n="commit-highlights">Commit Highlights</h4>
                             <ul class="space-y-2 text-sm text-on-surface-variant font-mono">
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">75ebc72:</span> <span data-i18n="update1-commit1">Add optional TLS support for the shared gateway.</span></li>
-                                <li class="flex items-start gap-2"><span class="text-primary font-bold">cf08808:</span> <span data-i18n="update1-commit2">Document the public browser extension listings.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">v0.3.0:</span> <span data-i18n="update1-commit1">Add validated purchase, vendor-bill, inventory, and warehouse workflows.</span></li>
+                                <li class="flex items-start gap-2"><span class="text-primary font-bold">security:</span> <span data-i18n="update1-commit2">Enforce delegated ACLs, record rules, company context, and controlled writes.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -818,7 +872,7 @@
     <script>
         const I18N = {
             en: {
-                "meta-description": "Odooclaw brings AI assistance, OCR, voice interactions, dual-layer memory, TLS-ready deployment, and published Firefox/Chrome Browser Copilot extensions directly into Odoo workflows.",
+                "meta-description": "Odooclaw v0.3.0 brings secure business operations, strategic Engram memory, OCR, voice, and Browser Copilot into real Odoo workflows.",
                 "nav-features": "Features",
                 "nav-copilot": "Copilot",
                 "nav-architecture": "Architecture",
@@ -826,9 +880,27 @@
                 "nav-changelog": "Changelog",
                 "nav-docs": "Docs",
                 "hero-title": "AI assistant for Odoo, <br/>built to run where <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container\">your ERP lives.</span>",
-                "hero-subtitle": "Odooclaw brings AI assistance, OCR, voice interactions, dual-layer memory, TLS-ready deployment, and published Firefox/Chrome Browser Copilot extensions directly into Odoo. Lightweight, asynchronous, and built for real production environments.",
+                "hero-subtitle": "Odooclaw v0.3.0 adds secure purchases, vendor bills, inventory, and warehouse operations to its AI, OCR, voice, memory, and Browser Copilot foundation. Lightweight, asynchronous, and validated for real production environments.",
                 "read-docs": "Read the Docs",
                 "view-github": "View on GitHub",
+                "release-badge": "v0.3.0 is available",
+                "release-kicker": "Latest release · June 8, 2026",
+                "release-title": "v0.3.0: safer day-to-day Odoo operations",
+                "release-desc": "OdooClaw now covers practical business operations under native Odoo permissions and adds optional strategic memory through an internal, controlled Engram MCP integration.",
+                "release-cta": "Read v0.3.0 release notes",
+                "release-purchase-title": "Purchases and vendor bills",
+                "release-purchase-desc": "OCR validation, duplicate and total checks, missing-vendor proposals, and PO/receipt matching.",
+                "release-stock-title": "Inventory and warehouse",
+                "release-stock-desc": "Receipts, deliveries, transfers, traceability, replenishment, discrepancies, and controlled adjustments.",
+                "release-security-title": "Native delegated security",
+                "release-security-desc": "Every MCP operation inherits Odoo ACLs, record rules, active-user status, and company context.",
+                "release-oca-title": "Capability-first OCA support",
+                "release-oca-desc": "Optional OCA purchase and logistics capabilities are detected without creating mandatory dependencies.",
+                "release-engram-title": "Strategic memory with Engram",
+                "release-engram-desc": "Optional internal MCP integration stores durable decisions and discoveries without exposing raw Engram tools to the model.",
+                "release-stat-odoo": "Odoo MCP tests passed",
+                "release-stat-doodba": "Doodba 18 MCP tests passed",
+                "release-stat-copilot": "Browser Copilot tests passed",
                 "firefox-add-on": "Firefox Add-on",
                 "chrome-extension": "Chrome Extension",
                 "chrome-web-store": "Chrome Web Store",
@@ -941,12 +1013,12 @@
                 "badge-latest": "Latest",
                 "badge-previous": "Previous",
                 "badge-foundation": "Foundation",
-                "recent-commits": "Recent Commits",
+                "recent-commits": "Published release",
                 "commit-highlights": "Commit Highlights",
-                "update1-title": "v0.2.3: TLS hardening and browser extension availability",
-                "update1-desc": "OdooClaw v0.2.3 adds optional native gateway TLS, documents the recommended reverse-proxy TLS path for Doodba deployments, and now links the public Firefox Add-on and Chrome Web Store listing for Browser Copilot.",
-                "update1-commit1": "Add optional TLS support for the shared gateway.",
-                "update1-commit2": "Document the public browser extension listings.",
+                "update1-title": "v0.3.0: secure purchases, inventory, and warehouse operations",
+                "update1-desc": "OdooClaw v0.3.0 expands safe day-to-day business operations and hardens delegated Odoo permissions, with real validation against Doodba 18.",
+                "update1-commit1": "Add validated purchase, vendor-bill, inventory, and warehouse workflows.",
+                "update1-commit2": "Enforce delegated ACLs, record rules, company context, and controlled writes.",
                 "update2-title": "Workforce + Accounting + OCR Expense flows are live",
                 "update2-desc": "OdooClaw adds workforce operations, accounting operations, and OCR expense creation for employee and mileage receipts.",
                 "update2-commit1": "Document workforce/accounting/OCR tools and private Odoo routing modes.",
@@ -988,7 +1060,7 @@
                 "i-accept": "I Accept"
             },
             es: {
-                "meta-description": "Odooclaw integra IA, OCR, voz, memoria en dos capas, despliegue con TLS y extensiones Browser Copilot publicadas para Firefox y Chrome directamente en flujos de Odoo.",
+                "meta-description": "Odooclaw v0.3.0 integra operaciones de negocio seguras, memoria estratégica con Engram, OCR, voz y Browser Copilot en flujos reales de Odoo.",
                 "nav-features": "Características",
                 "nav-copilot": "Copiloto",
                 "nav-architecture": "Arquitectura",
@@ -996,9 +1068,27 @@
                 "nav-changelog": "Novedades",
                 "nav-docs": "Documentación",
                 "hero-title": "Asistente de IA para Odoo, <br/>diseñado para operar donde <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container\">vive tu ERP.</span>",
-                "hero-subtitle": "Odooclaw integra IA, OCR, voz, memoria en dos capas, despliegue con TLS y extensiones Browser Copilot publicadas para Firefox y Chrome directamente en Odoo. Ligero, asíncrono y diseñado para entornos reales de producción.",
+                "hero-subtitle": "Odooclaw v0.3.0 añade compras, facturas de proveedor, inventario y almacén seguros sobre su base de IA, OCR, voz, memoria y Browser Copilot. Ligero, asíncrono y validado para entornos reales de producción.",
                 "read-docs": "Leer documentación",
                 "view-github": "Ver en GitHub",
+                "release-badge": "v0.3.0 ya está disponible",
+                "release-kicker": "Última release · 8 de junio de 2026",
+                "release-title": "v0.3.0: operaciones diarias de Odoo más seguras",
+                "release-desc": "OdooClaw ya cubre operaciones prácticas de negocio bajo los permisos nativos de Odoo y añade memoria estratégica opcional mediante una integración MCP interna y controlada con Engram.",
+                "release-cta": "Leer las notas de v0.3.0",
+                "release-purchase-title": "Compras y facturas de proveedor",
+                "release-purchase-desc": "Validación OCR, controles de duplicados y totales, propuesta de proveedores y matching con pedidos y recepciones.",
+                "release-stock-title": "Inventario y almacén",
+                "release-stock-desc": "Recepciones, entregas, transferencias, trazabilidad, reposición, discrepancias y ajustes controlados.",
+                "release-security-title": "Seguridad delegada nativa",
+                "release-security-desc": "Cada operación MCP hereda ACL, reglas de registro, estado del usuario y contexto de compañía de Odoo.",
+                "release-oca-title": "Compatibilidad OCA capability-first",
+                "release-oca-desc": "Las capacidades opcionales de compras y logística de OCA se detectan sin crear dependencias obligatorias.",
+                "release-engram-title": "Memoria estratégica con Engram",
+                "release-engram-desc": "La integración MCP interna opcional guarda decisiones y descubrimientos duraderos sin exponer al modelo las herramientas crudas de Engram.",
+                "release-stat-odoo": "tests de Odoo MCP superados",
+                "release-stat-doodba": "tests MCP en Doodba 18 superados",
+                "release-stat-copilot": "tests de Browser Copilot superados",
                 "firefox-add-on": "Extensión Firefox",
                 "chrome-extension": "Extensión Chrome",
                 "chrome-web-store": "Chrome Web Store",
@@ -1111,12 +1201,12 @@
                 "badge-latest": "Último",
                 "badge-previous": "Anterior",
                 "badge-foundation": "Base",
-                "recent-commits": "Commits recientes",
+                "recent-commits": "Release publicada",
                 "commit-highlights": "Highlights de commits",
-                "update1-title": "v0.2.3: TLS reforzado y extensiones de navegador disponibles",
-                "update1-desc": "OdooClaw v0.2.3 añade TLS nativo opcional en el gateway, documenta el camino recomendado con TLS en reverse proxy para Doodba y enlaza la extensión pública de Firefox y la ficha de Chrome Web Store para Browser Copilot.",
-                "update1-commit1": "Añade soporte TLS opcional para el gateway compartido.",
-                "update1-commit2": "Documenta las fichas públicas de las extensiones de navegador.",
+                "update1-title": "v0.3.0: compras, inventario y almacén seguros",
+                "update1-desc": "OdooClaw v0.3.0 amplía las operaciones seguras del día a día y refuerza los permisos delegados de Odoo, con validación real sobre Doodba 18.",
+                "update1-commit1": "Añade flujos validados de compras, facturas de proveedor, inventario y almacén.",
+                "update1-commit2": "Aplica ACL, reglas de registro, contexto de compañía y escrituras controladas.",
                 "update2-title": "Los flujos de Workforce + Accounting + gastos OCR están disponibles",
                 "update2-desc": "OdooClaw añade operaciones de workforce, operaciones de contabilidad y creación de gastos OCR para tickets de empleado y kilometraje.",
                 "update2-commit1": "Documenta herramientas de workforce/accounting/OCR y modos de privacidad en Odoo.",
